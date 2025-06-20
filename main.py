@@ -73,7 +73,10 @@ while coffee_machine_on:
     elif coffee=='report':
         print("We have these resources left:")
         for i in resources:
-            print(f"{i}: {resources[i]} ml")
+            if i == "coffee":
+                print(f"{i}: {resources[i]} g")
+            else:
+                print(f"{i}: {resources[i]} ml")
         print(f"Money: {profit}")
     else:
         drink = MENU[coffee]
